@@ -1,43 +1,42 @@
 # 🔗 Shorty URL
 
-Acortador de enlaces desarrollado con **Node.js**, **Express** y **MySQL**. Permite generar una versión corta de una URL larga, redireccionar al acceder al enlace corto y llevar un conteo de accesos.
+A URL shortener developed with **Node.js**, **Express**, and **MySQL**. It allows generating a short version of a long URL, redirecting when accessing the short link, and tracking the number of visits.
 
-### 🛠 Tecnologías utilizadas
+### 🛠 Technologies Used
 
-- Node.js
-- Express
-- MySQL
+- Node.js  
+- Express  
+- MySQL  
 
 ---
 
 ## 📡 Endpoints
 
-### 🔗 **Acortador de URL**
-- `POST /shorten` → Crea una nueva URL corta a partir de una URL larga.
+### 🔗 **URL Shortener**
+- `POST /shorten` → Creates a short URL from a long URL.
   - **Body:**  
     ```json
-    { "originalUrl": "https://ejemplo.com/url-larga" }
+    { "originalUrl": "https://example.com/long-url" }
     ```
-  - **Respuesta:**  
+  - **Response:**  
     ```json
     { "shortUrl": "http://localhost:3000/abc123" }
     ```
 
-- `GET /:shortId` → Redirige a la URL original asociada al `shortId` y aumenta el contador de accesos.
-  - **Parámetro de ruta:**  
+- `GET /:shortId` → Redirects to the original URL associated with the `shortId` and increases the access count.
+  - **Path Parameter:**  
     `shortId`  
-  - **Ejemplo:**  
-    Acceder a `http://localhost:3000/abc123` redirige a la URL original.
+  - **Example:**  
+    Visiting `http://localhost:3000/abc123` redirects to the original URL.
 
-- `GET /stats/:shortId` → Devuelve las estadísticas de la URL corta.
-  - **Parámetro de ruta:**  
+- `GET /stats/:shortId` → Returns statistics for the short URL.
+  - **Path Parameter:**  
     `shortId`  
-  - **Respuesta:**  
+  - **Response:**  
     ```json
     {
       "short_id": "abc123",
-      "original_url": "https://ejemplo.com/url-larga",
-      "access_count": 5,
+      "original_url": "https://example.com/long-url",
+      "access_count": 5
     }
     ```
-```
