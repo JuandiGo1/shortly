@@ -19,7 +19,7 @@ export async function getOriginalUrl(db, shortId) {
 
 export async function getStatsUrl(db, shortId) {
     const [result] = await db.query(
-        'SELECT access_count FROM urls WHERE short_id = ?',
+        'SELECT short_id, original_url, access_count FROM urls WHERE short_id = ?',
         [shortId]
     );
     return result[0] || null;
