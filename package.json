@@ -4,6 +4,7 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
+    "build": "bun run build",
     "start": "bun app.js",
     "dev": "nodemon app.js"
   },
