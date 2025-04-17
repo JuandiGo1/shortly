@@ -10,7 +10,7 @@ export async function newShortUrl(req, res) {
         }
         const db = req.app.locals.db;
         await createShortUrl(db, short_id, original_url);
-        const shortUrl = `${req.protocol}://${req.get('host')}/${short_id}`;
+        const shortUrl = `https://${req.get('host')}/${short_id}`;
 
         res.status(201).json({ shortUrl });
     } catch (err) {
