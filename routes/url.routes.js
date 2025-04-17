@@ -5,6 +5,6 @@ const urlRouter = Router();
 
 urlRouter.post('/shorten', newShortUrl);
 urlRouter.get('/:shortId', redirectToOriginalUrl);
-urlRouter.get('/stats/:shortId', getStats);
+urlRouter.get('/:shortId/stats', getStats);
 
 export default urlRouter;

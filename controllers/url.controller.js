@@ -50,7 +50,7 @@ export async function getStats(req, res) {
         res.status(200).json({result 
          });
       } else {
-        res.status(404).send('URL no encontrada');
+        res.status(404).json({ error: 'URL no encontrada' });
       }
     } catch (err) {
       console.error('Error al acceder a las estadisticas:', err);
