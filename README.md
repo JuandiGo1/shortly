@@ -8,6 +8,11 @@ A URL shortener developed with **Node.js**, **Express**, and **MySQL**. It allow
 - Express  
 - MySQL  
 
+### 🌍 Deployment
+
+- 🚀 **API deployed on Vercel**: [`https://shtly.vercel.app/`](https://shtly.vercel.app/)
+- 🗄️ **MySQL database hosted on Railway**
+
 ---
 
 ## 📡 Endpoints
@@ -38,5 +43,6 @@ A URL shortener developed with **Node.js**, **Express**, and **MySQL**. It allow
       "short_id": "abc123",
       "original_url": "https://example.com/long-url",
       "access_count": 5
+      "created_at": "2025-04-17T20:54:37.000Z"
     }
     ```
