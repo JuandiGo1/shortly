@@ -11,6 +11,7 @@ A URL shortener developed with **Node.js**, **Express**, and **MySQL**. It allow
 ### 🌍 Deployment
 
 - 🚀 **API deployed on Vercel**: [`https://shtly.vercel.app/`](https://shtly.vercel.app/)
+- 🖥️ **Frontend deployed on Vercel**: [`https://shorty-url-web.vercel.app/`](https://shorty-url-web.vercel.app/)
 - 🗄️ **MySQL database hosted on Railway**
 
 ---
